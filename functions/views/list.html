@@ -56,9 +56,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
         <script type="text/javascript">
             $('.ui.accordion').accordion();
+            // console.log(location.pathname);
+            // console.log(location.pathname.split('/'));
+            // const parse_url=location.pathname.split('/');
+            // let url='';
 
             $.ajax({
-                url:'http://localhost:5001/wordwolf/us-central1/getRoomList',
+                url:location.pathname+'/getRoomList',
                 type:'GET',
                 dataType:'json',
                 timespan:1000
